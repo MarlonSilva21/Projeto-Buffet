@@ -8,6 +8,9 @@ body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
+/**menu principal**/
+
 header{
     height: 100vh;
     background: no-repeat center/cover url("../img/header.jpg");
@@ -19,8 +22,7 @@ button{
     font-weight: bold;
     border: 0;
     background-color:#e4c38396;
-    color: #ffffff;
-
+    color: #ffffff;=
 }
 
 header nav{
@@ -41,7 +43,7 @@ header nav ul {
 header nav li {
     margin: 0 15px;}
     li:hover{
-        color:red;
+            color: white;
 }
 
 .header-content{
@@ -57,4 +59,40 @@ header nav li {
 .header-content h1 {
     font-size: 3rem;
     margin: 10px;
+}
+
+
+/**conteudo principal**/
+
+main{
+    font-size: 20px;
+}
+main section{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    color:#cc0001;
+}
+main section:nth-child(odd){
+    height: 100vh;
+    background-color: #f0f0d6;
+}
+
+main section:nth-child(even){
+    height: 100vh;
+    background-color:#f8efba ;
+}
+
+
+/** botão para celular **/
+
+@media (max-width: 768px){
+
+}
+
+/*rodapé*/
+footer p {
+    text-align: center;
 }
