@@ -25,25 +25,73 @@ button{
     color: #ffffff;=
 }
 
-header nav{
-    position: relative;
+.navbar{
+
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 0 30px;
+    padding: 20px;
 }
-header nav p {
+
+.hamburguer{
+    display: none;}
+
+
+.logo {
     font-weight: bold;
 }
 
-header nav ul {
+.navbar ul {
     list-style: none;
     display: flex;
 }
 
-header nav li {
+.navbar li {
     margin: 0 15px;}
     li:hover{
             color: white;
+}
+
+.hamburguer{
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    border-radius: 5px;
+    border: 0;
+
+    position: relative;
+    cursor: pointer;
+
+    display: none;
+}
+
+.hamburguer:after{
+    content: "";
+
+    position: absolute;
+    top: 35%;
+    left: 15%;
+
+    width: 85%;
+    height: 10%;
+    border-radius: 5px;
+
+    background-color: red;
+}
+.hamburguer:before{
+    content:"";
+
+    position: absolute;
+    top: 55%;
+    left: 15%;
+
+    width: 85%;
+    height: 10%;
+    border-radius: 5px;
+
+    background-color: red;
 }
 
 .header-content{
@@ -54,6 +102,7 @@ header nav li {
     color: #ffffff;
     background-color: #091f2d33;
     border-radius: 8px;
+    position: relative;
 
 }
 .header-content h1 {
@@ -88,7 +137,44 @@ main section:nth-child(even){
 
 /** botão para celular **/
 
-@media (max-width: 768px){
+@media screen and (max-width: 980px){
+    .hamburguer{
+        display: block;
+        z-index: 999;
+        position: fixed;
+        right: 10px;
+
+
+    }
+    .menu{
+        z-index: 998;
+        position: fixed;
+        right: -100%;
+        top:    0;
+
+
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: lightgray;
+
+        width:       100%;
+        max-width:   250px;
+
+        padding: 100px 0;
+        line-height: 70px;
+
+        flex-direction: column;
+        transition: 0.5s ease;
+
+    }
+    .menu.active{
+    right:0;
+    }
+
+
+
+
 
 }
 
