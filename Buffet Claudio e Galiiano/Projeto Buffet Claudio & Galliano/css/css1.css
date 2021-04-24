@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body, html{
+    height: 100vh;
+    width: 100%;
+}
+
+#sec{
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #fff, #f8f7f6);
+    display: none;
+}
+
+header{
+    position: relative;
+    font-size: 20px;
+    background-image: url("../img/Logo-fundo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.logo{
+    width: 100%;
+    height: 160px;
+    display:grid;
+    justify-content: center;
+    align-content: center;
+
+}
+.logo img {
+    height: 160px;
+}
+.nav-bar {
+    width: 100%;
+    height: 40px;
+    background-color: #1C1C1C;
+    display:grid;
+    justify-content: center;
+    align-content: center;
+
+}
+.nav-bar ul {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar li{
+    width: 160px;
+    height: 40px;
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Caveat', cursive;
+    font-size: 1em;
+    color:white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.border p{
+    border-bottom: 2px solid black;
+}
+
+.abs-pos{
+    position: absolute;
+    top: 160px;
+    right: 0;
+}
+
+.fix-pos{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.ghost {
+    width: 100%;
+    height: 40px;
+    background-color: #cc0001;
+}
+
+main {
+    font-size: 1.5vw;
+}
+
+main section {
+
+    font-family: 'Lobster', cursive;
+    color: #000000;
+    font-size: 1.5vw;
+}
+
+#Sobre{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 2em;
+    height: 500px;
+
+
+}
+/*Galeria*/
+#Galeria{
+    text-align: center;
+}
+/*Serviços*/
+#Servicos{
+    text-align: center;
+}
+/**************************************************************/
+
+#container-agendamento{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #f8f7f6;
+}
+
+#fundo-vermelho{
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    right: 0;
+    background: #b60f03;
+}
+
+#contatos{
+    position: absolute;
+    width: 40%;
+    height: 70vh;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+
+
+    background: black;
+}
+
+#contatos i{
+    color: white;
+    display: flex;
+    font-size: 2.1em;
+    margin-left: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+#contatos span{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+#contatos h2{
+    color: white;
+    font-size: 4rem;
+    margin: 20px;
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+}
+
+
+
+#contatos #redes-sociais{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+#contatos #redes-sociais a {
+    font-size: x-large;
+}
+
+#redes-sociais a i:hover{
+
+    color: green;
+}
+#redes-sociais a i.fa-instagram:hover{
+    color: darkorchid;
+}
+
+#redes-sociais a i.fa-facebook-square:hover{
+    color: #3a559f;
+}
+
+.fa-phone:before {
+    content: "\f095";
+    transform: scaleX(-1);
+}
+
+#formulario{
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    /* margin-left: 21rem; */
+    left: 10%;
+    right: 48%;
+    top: 0;
+    margin: auto;
+    max-height: 20rem;
+    bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    /*background: #a41b11;*/
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+#formulario p {
+    font-size: 0.6em;
+    position: absolute;
+    top: 0;
+    margin-top: 15px;
+    left: 10%;
+    right: 10%;
+}
+
+#formulario h2{
+    font-family: 'Lobster', cursive;
+    font-size: 44px;
+    position: absolute;
+    top: -40px;
+    left: 25%;
+    right: 10%;
+
+}
+
+#formulario h2 ::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 200px;
+    bottom: 1px;
+    left: 47px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #b60f03, #000000);
+}
+
+#formulario-agendamentos{
+    position: absolute;
+    display: flex;
+    left: 10%;
+    right: 10%;
+    flex-flow: column nowrap;
+    margin-top: 50px;
+}
+
+#formulario input{
+    border: none;
+    border-bottom: 1px solid#b60f03;
+    background-color: #f8f7f6;
+    margin-bottom: 20px;
+    width: 90%;
+    outline: none;
+}
+
+#formulario textarea{
+    width: 90%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #b60f03;
+    background: #f8f7f6;
+    height: 20px;
+    max-height: 100px;
+    min-width: 90%;
+    max-width: 90%;
+
+}
+
+#formulario .btn-form{
+    background: black;
+    color: white;
+    margin-top: 0;
+    padding: 8px;
+    cursor: pointer;
+    bottom: -80px;
+    position: absolute;
+    width: 70%;
+}
+.form-text-email{
+    position: absolute;
+    top: 103px;
+    color: #938a8a;
+}
+
+
+
+
+
+
+
+footer{
+    padding: 15px;
+    color: white;
+    background: black;
+    text-align: center;
+}
+
+#etiqueta-bonus{
+    position: absolute;
+    width: 600px;
+    height: 37px;
+    top: 45%;
+    bottom: 50%;
+    padding: 10px;
+    left: -573px;
+    background-color: #b60f03 ;
+}
+
+#etiqueta-bonus:hover{
+    left: 0;
+    background: linear-gradient(to right, #b60f03, black);
+    width: 50%;
+    transition: all 3s;
+}
+
+.etiquetatxt{
+    color: #f8f7f6;
+    position: absolute;
+    line-height: 20px;
+    width: 65%;
+    text-align: center;
+}
+
+#etiqueta-bonus i{
+    color: #f8f7f6;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    bottom: 6px;
+    font-size: 26px;
+}
+
+@media  (max-width: 991px){
+    header{
+        position: relative;
+        background-image: url("../img/Logo-fundo.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .logo{
+        width: 100%;
+        height: 160px;
+        display:grid;
+        justify-content: center;
+        align-content: center;
+    }
+    .logo img {
+        height: 160px;
+    }
+    .nav-bar {
+        height: 40px;
+        background-color: #1C1C1C;
+    }
+
+    .nav-bar ul {
+        position: absolute;
+        top: 40px;
+        grid-auto-flow:row;
+        grid-gap: 15px;
+        justify-content: center;
+        align-content: center;
+        width: inherit;
+        background-color: rgba(0, 0, 0, 0.8);;
+        transform: translateX(-100%);
+    }
+    .nav-bar-opened ul{
+        transform: translateX(0%);
+    }
+    .nav-bar ul li {
+        justify-content: center;
+        align-content: center;
+        color: white;
+    }
+    .hamburguer {
+        position: relative;
+        background: white;
+        width: 28px;
+        height: 2px;
+    }
+
+    .hamburguer:before,
+    .hamburguer:after {
+        background: white;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .hamburguer:before {
+        top: -10px;
+    }
+
+    .hamburguer:after {
+        bottom: -10px;
+    }
+    main{
+        font-size: 4vw;
+    }
+    #Sobre{
+        margin-top: 10%;
+        font-size: 0.9em;
+    }
+
+    #container-agendamento{
+        height: 126vh;
+    }
+
+    #container-agendamento  #contatos{
+        position: absolute;
+        top: 65%;
+        width: 100%;
+        height: 25%;
+        margin-bottom: -3px;
+    }
+
+
+    #container-agendamento #fundo-vermelho{
+        display: none; /*  REVER ISSO AQUI*/
+        background: #f8f7f6;
+        width: 100%;
+        z-index: 0;
+
+    }
+
+    #container-agendamento #formulario{
+        display: flex;
+        /* justify-content: center; */
+        bottom: 26%;
+        left: 0;
+        right: 0;
+
+    }
+
+    #container-agendamento #formulario h2{
+        font-size: 7em;
+        letter-spacing: 4px;
+        top: -130%;
+        left: 18%;
+        right: 50%;
+
+    }
+
+    #formulario h2 ::before {
+        display: none;
+    }
+
+    #formulario p{
+        font-size: 2em;
+        top: -88%;
+        text-align: center;
+    }
+
+    #formulario-agendamentos{
+        width: 85%;
+       font-size: 3em;
+    }
+
+    #container-agendamento #etiqueta-bonus{
+        display: none;
+    }
+
+    #container-agendamento button.btn-form{
+        background: black;
+        color: white;
+        margin-top: -1px;
+        padding: 8px;
+        cursor: pointer;
+        bottom: -100px;
+        position: absolute;
+        font-size: 1em;
+        width: 90%;
+    }
+
+    #contatos #redes-sociais{
+        display: block;
+        right: 0;
+        top: 0;
+        position: absolute;
+        margin-right: 40px;
+    }
+    #sec{
+        display: block;
+        height: 200px;
+    }
+}
+

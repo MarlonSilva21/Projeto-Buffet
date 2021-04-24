@@ -1,0 +1,347 @@
+/************************ Padronização ***********************/
+
+body, html{
+    height: 100%;
+    width: 100%;
+    background-color: #f8f7f6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/************************ Estilização lado direito da pagina ***********************/
+
+#container-agendamento{
+    position: relative;
+    height: 90%;
+    width: 100%;
+}
+
+#fundo-vermelho{
+    height: 93vh;
+    bottom: 0;
+    width: 30%;
+    background: #b60f03;
+    z-index: 99999;
+    float: right;
+
+}
+#lateral-contatos{
+    position: absolute;
+    color: white;
+    height: 73vh;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 40%;
+    background: black;
+
+}
+#quadrado-sobreposto{
+    position: absolute;
+    padding: 12px 12px;
+    background: #b60f03;
+    transform: translateX(-50%);
+    top: -10px
+
+}
+
+/************************ Area logo ***********************/
+
+#letra-logo{
+    position: absolute;
+    border: 2px solid black;
+    padding: 10px;
+    top: 0;
+    margin: 20px;
+    transform: rotateZ(45deg)
+}
+
+/********************* Etiqueta bonus *********************/
+
+#etiqueta-bonus{
+    position: absolute;
+    width: 600px;
+    height: 2.3%;
+    top: 45%;
+    bottom: 50%;
+    padding: 10px;
+    left: -600px;
+    background-color: #b60f03 ;
+}
+
+#etiqueta-bonus:hover{
+    left: 0;
+    background: linear-gradient(to right, #b60f03, black);
+    width: 50%;
+    transition: all 3s;
+}
+
+.etiquetatxt{
+    color: #f8f7f6;
+    position: absolute;
+    line-height: 20px;
+    width: 65%;
+    text-align: center;
+}
+
+#etiqueta-bonus i{
+    color: #f8f7f6;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    bottom: 6px;
+    font-size: 26px;
+}
+
+/************************ Blocos interativos ***********************/
+
+#lateral-blocos{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+}
+
+#bloco-interativo{
+    position: absolute;
+    width: 200px;
+    height: 2.3%;
+    top: 0;
+    left: -150px;
+    padding: 10px;
+    background-color: #000;
+}
+
+#bloco-interativo:hover {
+    left: 0;
+    background: linear-gradient(to right, #b60f03, black);
+    width: 25%;
+    transition: all 0.5s;
+}
+
+#bloco-interativo-1{
+    position: absolute;
+    width: 200px;
+    height: 2.3%;
+    top: 39px;
+    left: -180px;
+    padding: 10px;
+    background-color: #b60f03;
+}
+
+#bloco-interativo-1:hover {
+    left: 0;
+    background: linear-gradient(to right, black, #b60f03);
+    width: 15%;
+    transition: all 3s;
+}
+
+
+/************************ Footer ***********************/
+
+footer{
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 15px;
+    clear: both;
+}
+
+
+
+.form-group{
+    font-family: 'Lobster', cursive;
+}
+
+
+#formulario{
+    position: absolute;
+    /* margin-left: 21rem; */
+    left: 10%;
+    right: 48%;
+    top: 0;
+    margin: auto;
+    max-height: 20rem;
+    bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    /*background: #a41b11;*/
+    padding: 2rem;
+    border-radius: 8px;
+
+    /*position: absolute;*/
+    /*left: 120px;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*display: flex;*/
+    /*flex-flow: column nowrap;*/
+    /*justify-content: center;*/
+
+}
+
+#formulario p{
+    font-size: 0.9em;
+    position: absolute;
+    top: 0;
+    margin-top: 40px;
+    left: 10%;
+    right: 10%;
+    font-family: 'Lobster', cursive;
+}
+
+
+#formulario h2{
+    font-family: 'Lobster', cursive;
+    font-size: 44px;
+    position: absolute;
+    top: -30px;
+    left: 25%;
+    right: 10%;
+
+}
+
+#formulario h2 ::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 200px;
+    bottom: 1px;
+    left: 47px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #b60f03, #000000);
+}
+
+#formulario-agendamentos{
+    position: absolute;
+    display: flex;
+    left: 10%;
+    right: 10%;
+    flex-flow: column nowrap;
+    margin-top: 50px;
+
+}
+#formulario input{
+    border: none;
+    border-bottom: 1px solid#b60f03;
+    background-color: #f8f7f6;
+    margin-bottom: 20px;
+    width: 90%;
+    outline: none;
+}
+
+#formulario textarea{
+    width: 90%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #b60f03;
+    background: #f8f7f6;
+    height: 20px;
+    max-height: 100px;
+    min-width: 90%;
+    max-width: 90%;
+
+}
+
+#formulario .btn-form{
+    background: black;
+    color: white;
+    margin-top: 0;
+    padding: 8px;
+    cursor: pointer;
+    bottom: -80px;
+    position: absolute;
+    width: 70%;
+}
+.form-text-email{
+    position: absolute;
+    top: 103px;
+    color: #938a8a;
+}
+
+#lateral-contatos h2{
+    position: absolute;
+    top: 0;
+    margin: 30px;
+}
+
+#lateral-contatos i{
+    color: white;
+    /* padding: 200px; */
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+    font-size: 25px;
+}
+
+#lateral-contatos i span{
+    left: 30px;
+    position: absolute;
+    top: 3px;
+    font-size: 0.9rem;
+    width: 165px;
+}
+
+#lateral-contatos i.icon-phone{
+    position: absolute;
+    font-size: 25px;
+    left: 2rem;
+    top: 11.5rem;
+    transform: scaleX(-1);
+}
+
+#lateral-contatos span.phone-txt{
+    position: absolute;
+    left: 62px;
+    font-size: 0.9rem;
+    top: 190px;
+}
+
+#lateral-contatos i.icon-map{
+    position: absolute;
+    left: 2rem;
+    top: 15rem;
+    font-size: 25px;
+}
+
+#lateral-contatos i span.map-txt{
+    left: 32px;
+}
+
+#lateral-contatos a.whatsapp-icon i{
+    top: 25.5rem;
+    left: 30%;
+    font-size: 2em;
+}
+
+#lateral-contatos a.instagram-icon i{
+
+    top: 25.5rem;
+    left: 50%;
+    font-size: 2em;
+}
+
+#lateral-contatos a.facebook-icon i{
+    top: 25.5rem;
+    left: 70%;
+    font-size: 2em;
+}
+
+#lateral-contatos h2.redes-h2{
+    width: 6em;
+    height: 1em;
+    top: 12em;
+    left: 45%;
+    transform: translateX(-50%);
+
+}

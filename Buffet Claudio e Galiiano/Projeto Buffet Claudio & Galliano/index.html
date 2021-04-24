@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Agendamentos - Realize o seu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="container-agendamento">   <!-- Container central  -->
+
+        <section id="formulario">
+
+            <h2><strong>Agendamentos</strong></h2>
+            <p>Entre em contato conosco ou realize seu agendamento por aqui mesmo, responderemos o mais breve possível</p>
+
+            <form id="formulario-agendamentos">
+                <div class="form-group">
+                    <label for="formulario">Nome</label> <br>
+                    <input type="text" class="form-control"  id="Nome" placeholder="Insira seu nome ou o nome ">
+                </div>
+                <div class="form-group">
+                    <label for="Email1">Endereço de email</label><br>
+                    <input type="email"  id="Email1" aria-describedby="texto" placeholder="nome@exemplo.com"><br>
+                    <small id="texto" class="form-text-email">Nunca vamos compartilhar seu email, com ninguém.</small><br>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label><br/>
+                    <textarea class="form-control" id="mensagem" ></textarea><br>
+                </div>
+                <button type="submit" class="btn-form">Enviar</button>
+            </form>
+        </section>
+
+            <div id="fundo-vermelho"> <!-- Fundo vermelho -->
+                <div id="lateral-contatos"> <!-- Fundo preto para contatos -->
+
+                    <h2> Contatos </h2>
+
+                    <i class="fa fa-envelope" aria-hidden="true"><span> contato@claudioegalliano.com.br</span></i>
+                    <i class="fa fa-phone icon-phone" aria-hidden="true"></i>
+                    <span class="phone-txt">(11) 99999-0869</span>
+                    <i class="fa fa-map icon-map" aria-hidden="true"><span class="map-txt">São Paulo e Rio de Janeiro</span></i>
+
+
+                    <h2 class="redes-h2"> Redes Sociais</h2>
+                    <a class="whatsapp-icon" href="http://api.whatsapp.com/send?phone=5511964475776" target="_blank">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                    <a class="instagram-icon" href="https://www.instagram.com/buffet_claudio_e_galliano/" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a class="facebook-icon" href="https://www.facebook.com/claudioegalliano.com.br" target="_blank">
+                        <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                    </a>
+
+
+                    <div id="quadrado-sobreposto"></div>  <!-- quadrado superior sobreposto -->
+                </div>
+            </div>
+
+
+
+    <div id="letra-logo"></div>
+
+<!--    <div id="lateral-blocos">-->
+        <div id="etiqueta-bonus"> <!-- /* Começo etiqueta -->
+
+<!--            <i class="fas fa-align-left" aria-hidden="true"> </i>-->
+            <p class="etiquetatxt">Código Galliano10</p>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+
+        </div> <!--/* Fim etiqueta -->
+
+
+    </div>
+<!--    /*</div>-->
+
+    <footer>
+        &copy; Copyright 2010 - 2021 Buffet Claudio & Galliano. Todos os direitos reservados
+    </footer>
+
+</body>
+</html>
