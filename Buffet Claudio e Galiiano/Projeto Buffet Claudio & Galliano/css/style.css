@@ -1,170 +1,701 @@
-/************************ Padronização ***********************/
-
-body, html{
-    height: 100%;
-    width: 100%;
-    background-color: #f8f7f6;
-}
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-li{
-    list-style: none;
-}
+
 a{
     text-decoration: none;
+    color: whitesmoke;
 }
 
-/************************ Estilização lado direito da pagina ***********************/
-
-#container-agendamento{
-    position: relative;
-    height: 90%;
+body, html{
+    height: 100vh;
     width: 100%;
 }
 
-#fundo-vermelho{
-    height: 93vh;
-    bottom: 0;
-    width: 30%;
-    background: #b60f03;
-    z-index: 99999;
-    float: right;
-
+ul{
+    list-style: none;
 }
-#lateral-contatos{
-    position: absolute;
-    color: white;
-    height: 73vh;
-    right: 0;
+
+hr{
+    margin: 30px auto;
+}
+
+#sec{
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #fff, #f8f7f6);
+    display: none;
+}
+
+header {
+    position: fixed;
+    font-size: 20px;
     top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 40%;
-    background: black;
-
-}
-#quadrado-sobreposto{
-    position: absolute;
-    padding: 12px 12px;
-    background: #b60f03;
-    transform: translateX(-50%);
-    top: -10px
-
-}
-
-/************************ Area logo ***********************/
-
-#letra-logo{
-    position: absolute;
-    border: 2px solid black;
-    padding: 10px;
-    top: 0;
-    margin: 20px;
-    transform: rotateZ(45deg)
-}
-
-/********************* Etiqueta bonus *********************/
-
-#etiqueta-bonus{
-    position: absolute;
-    width: 600px;
-    height: 2.3%;
-    top: 45%;
-    bottom: 50%;
-    padding: 10px;
-    left: -600px;
-    background-color: #b60f03 ;
-}
-
-#etiqueta-bonus:hover{
     left: 0;
-    background: linear-gradient(to right, #b60f03, black);
-    width: 50%;
-    transition: all 3s;
+    z-index: 9999;
 }
 
-.etiquetatxt{
-    color: #f8f7f6;
-    position: absolute;
-    line-height: 20px;
-    width: 65%;
+.logo{
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    background: black;
+    color: whitesmoke;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+
+}
+.nav-bar ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.nav-bar li{
+    margin: 0 15px
+}
+
+.menu-toggle
+{
+    color: #000000;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    position: relative;
+    height: 90vh;
+    filter: brightness(90%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../img/home2.jpg");
+}
+
+.conteudo-titulo span.titulo-home{
+    color: #fff;
+    background-color: #111;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transition: all 2s ;
+}
+
+
+.conteudo-titulo span.titulo-home:hover{
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+}
+
+#nav-service li:hover{
+    text-decoration: underline;
+}
+
+main {
+    font-size: 1.5vw;
+}
+
+main section {
+
+    font-family: 'Lobster', cursive;
+    color: #000000;
+    font-size: 1.5vw;
+}
+
+#Sobre{
+    height: 100vh;
+    width: 100%;
+}
+
+#Sobre h1{
+    text-transform: capitalize;
+    width: fit-content;
+    font-size: 8em;
+    font-weight: lighter;
+    font-family: 'Dancing Script', cursive;
+    margin: 30px auto;
+    text-shadow: 0.1em 0.1em 0.2em black
+}
+
+#Sobre p.sobre-titulo{
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
 }
 
-#etiqueta-bonus i{
-    color: #f8f7f6;
-    position: absolute;
-    right: 0;
-    top: 6px;
-    bottom: 6px;
-    font-size: 26px;
+#Sobre #mvv{
+    text-align: center;
+    margin-top: 30px;
 }
 
-/************************ Blocos interativos ***********************/
+#Sobre #descricao{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
-#lateral-blocos{
-    position: absolute;
+#Sobre #descricao h3{
+    margin-top: 50px;
+    text-align: center;
+}
+
+#Sobre #descricao span#mis{
+    color: #033148;;
+}
+#Sobre #descricao span#vis{
+    color: #f47a25;
+}
+#Sobre #descricao span#val{
+    color: #9bc84c;
+}
+
+/*-------------------------------------------------------------------------*/
+.conteudo-principal{
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.conteudo-principal h3{
+    margin-bottom: 15px;
+}
+
+
+/*-------------------- Serviços ----------------------*/
+
+section#logo-serviços{
+    display: flex;
+    min-height: 30vh;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+section#logo-serviços h2{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+}
+
+section#servicos{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #f8f7f6 url("../img/blocos_pretos.jpg") center/cover no-repeat fixed;
+    min-height: 100vh;
+}
+
+.container-serviços{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.container-serviços .card-principal{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(2, 2, 2, 1);
+    margin: 20px;
+    box-shadow: 0 5px 18px rgba(255, 255, 255,1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.container-serviços .card-principal .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.container-serviços .card-principal:hover .content{
+    opacity: 1;
+    transform: translateY(-150px);
+}
+
+.container-serviços .card-principal .content .contentbx{
     top: 0;
-    width: 50%;
+}
+
+.container-serviços .card-principal .content .contentbx h3{
+    color: #b60f03;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0 10px;
+    line-height: 1.1em;
+}
+
+.container-serviços .card-principal .content .contentbx h3 span{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+
+.container-serviços .card-principal .sci{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-serviços .card-principal .sci li {
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    opacity: 0;
+    text-align: center;
+}
+
+.container-serviços .card-principal:hover .sci li{
+    transform: translateY(-30px); /* translate original em 0*/
+    opacity: 1;
+}
+
+.container-serviços .card-principal .sci li a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-weight: initial;
+}
+
+.container-serviços .card-principal .sci li a.btn-services{
+    color: #f8f7f6;
+}
+
+.container-serviços .card-principal .sci a.btn-services{
+    display: block;
+    background: linear-gradient(to right ,#b60f03, #1C1C1C);
+    text-align: center;
+}
+
+/*------------------- Coffe Break -----------------*/
+
+.nav-bar-servicos{
+    display: flex;
+    justify-content: space-around;
+    background: black;
+    color: whitesmoke;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+}
+
+#nav-service{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+#nav-service li{
+  margin: 0 15px;
+}
+
+.logo-servicos{
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+
+.coffe-break{
+    position: relative;
+    height: 90vh;
+    filter: brightness(50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../img/Coffe-break.png");
+}
+
+.conteudo {
+    color: #000;
+    background-color: #f8f7f6;
+    text-align: justify;
+    padding: 50px 80px;
+}
+
+.conteudo h3{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.conteudo p{
+    text-align: center;
+}
+
+.conteudo-titulo{
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+}
+
+.conteudo-titulo span.titulo{
+    color: #fff;
+    background-color: #111;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.conteudo-titulo span.titulo:hover{
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+}
+
+/*----------------------  section card ------------------------------------*/
+section#cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+    background-image: url("../img/servicos_preto.jpg");
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+section#cards .container-serviços{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+section#cards .container-serviços .card{
+    position: relative;
+    width: 300px;
+    height: 700px;
+    background: rgba(255, 255, 255, 0.90);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(255,255,255,0.4);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+section#cards .container-serviços .card .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#cards .container-serviços .card .content .contentbx h3{
+    color: #1C1C1C;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0 10px;
+    line-height: 1.1em;
+    transform: translateY(-300px);
+}
+
+section#cards .container-serviços .card .content .contentbx h3 span{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+
+section#cards .container-serviços .card .sci{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-60px);
+}
+
+section#cards .container-serviços .card .sci li a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-weight: initial;
+}
+
+section#cards .container-serviços .card .content .contentbx{
+    top: 0;
+}
+/*------------------- Fim Coffe Break -----------------*/
+
+/*------------------- Inicio Vespertino -----------------*/
+
+.vespertino{
+    position: relative;
+    height: 90vh;
+    filter: brightness(50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../img/saladas.png");
+}
+
+.conteudo-titulo span.titulo-vespertino{
+    color: #000000;
+    background-color: #ffffff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*------------------- Fim Vespertino ------------------*/
+
+/*------------------- Inicio Coquetel -----------------*/
+
+.coquetel{
+    position: relative;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../img/drinls-capa.jpg");
+}
+
+.conteudo-titulo span.titulo{
+    color: #000;
+    background-color: #fff;
+    padding: 18px;
+    font-size: 25px;/
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*------------------- Eventos --------------------*/
+
+#eventos{
+    background-image: url("../img/eventos_fundo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    width: 100%;
     height: 100vh;
 }
 
-#bloco-interativo{
-    position: absolute;
-    width: 200px;
-    height: 2.3%;
-    top: 0;
-    left: -150px;
-    padding: 10px;
-    background-color: #000;
+.eventos-topo span.titulo:hover{
+    color: white;
+    background: #000;
 }
 
-#bloco-interativo:hover {
-    left: 0;
-    background: linear-gradient(to right, #b60f03, black);
-    width: 25%;
-    transition: all 0.5s;
+section#eventos .title_fotos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-#bloco-interativo-1{
-    position: absolute;
-    width: 200px;
-    height: 2.3%;
-    top: 39px;
-    left: -180px;
-    padding: 10px;
-    background-color: #b60f03;
+section#eventos .title_fotos h2 {
+    padding: 15px 30px;
+    background: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #111;
 }
 
-#bloco-interativo-1:hover {
-    left: 0;
-    background: linear-gradient(to right, black, #b60f03);
-    width: 15%;
-    transition: all 3s;
-}
-
-
-/************************ Footer ***********************/
-
-footer{
-    text-align: center;
+section#eventos .title_fotos h2:hover{
     background: black;
     color: white;
-    padding: 15px;
-    clear: both;
+}
+
+.eventos-topo{
+    position: relative;
+    height: 90vh;
+    filter: brightness(90%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../img/eventos_fundo.jpg");
+}
+
+section#fotos h2{
+    text-align: center;
+    font-size: xxx-large;
+    color: white;
+    background: black;
+    width: fit-content;
+    margin: 100px auto;
+    padding: 0 30px;
+}
+
+#layout_fotos{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#layout_fotos .caixa1{
+    height: 300px;
+    width: 300px;
+}
+
+#layout_fotos .caixa1 img{
+    height: 300px;
+    width: 300px;
+    padding: 10px;
 }
 
 
+/*------------------- Galeria --------------------*/
+#Galeria{
+    background-image: url("../img/galeria_fotos.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
 
-.form-group{
+/**************************************************************/
+
+#container-agendamento{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #f8f7f6;
+}
+
+.fundo-vermelho{
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    right: 0;
+    background: #b60f03;
+}
+
+#contatos{
+    position: absolute;
+    width: 40%;
+    height: 70vh;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+
+
+    background: black;
+}
+
+#contatos i{
+    color: white;
+    display: flex;
+    font-size: 2.1em;
+    margin-left: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+#contatos span{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+#contatos h2{
+    color: white;
+    font-size: 4rem;
+    margin: 20px;
     font-family: 'Lobster', cursive;
+    font-weight: normal;
 }
 
+
+
+#contatos #redes-sociais{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+#contatos #redes-sociais a {
+    font-size: x-large;
+}
+
+#redes-sociais a i:hover{
+
+    color: green;
+}
+#redes-sociais a i.fa-instagram:hover{
+    color: darkorchid;
+}
+
+#redes-sociais a i.fa-facebook-square:hover{
+    color: #3a559f;
+}
+
+.fa-phone:before {
+    content: "\f095";
+    transform: scaleX(-1);
+}
 
 #formulario{
+    font-family: 'Lobster', cursive;
     position: absolute;
     /* margin-left: 21rem; */
     left: 10%;
@@ -179,33 +710,22 @@ footer{
     /*background: #a41b11;*/
     padding: 2rem;
     border-radius: 8px;
-
-    /*position: absolute;*/
-    /*left: 120px;*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*display: flex;*/
-    /*flex-flow: column nowrap;*/
-    /*justify-content: center;*/
-
 }
 
-#formulario p{
-    font-size: 0.9em;
+#formulario p {
+    font-size: 0.6em;
     position: absolute;
     top: 0;
-    margin-top: 40px;
+    margin-top: 15px;
     left: 10%;
     right: 10%;
-    font-family: 'Lobster', cursive;
 }
-
 
 #formulario h2{
     font-family: 'Lobster', cursive;
     font-size: 44px;
     position: absolute;
-    top: -30px;
+    top: -40px;
     left: 25%;
     right: 10%;
 
@@ -229,8 +749,8 @@ footer{
     right: 10%;
     flex-flow: column nowrap;
     margin-top: 50px;
-
 }
+
 #formulario input{
     border: none;
     border-bottom: 1px solid#b60f03;
@@ -238,6 +758,7 @@ footer{
     margin-bottom: 20px;
     width: 90%;
     outline: none;
+    font-size: 12px;
 }
 
 #formulario textarea{
@@ -269,79 +790,176 @@ footer{
     color: #938a8a;
 }
 
-#lateral-contatos h2{
-    position: absolute;
-    top: 0;
-    margin: 30px;
-}
-
-#lateral-contatos i{
+footer{
+    padding: 15px;
     color: white;
-    /* padding: 200px; */
+    background: black;
+    text-align: center;
+}
+
+#etiqueta-bonus{
     position: absolute;
-    top: 8rem;
-    left: 2rem;
-    font-size: 25px;
+    width: 600px;
+    height: 37px;
+    top: 45%;
+    bottom: 50%;
+    padding: 10px;
+    left: -573px;
+    background-color: #b60f03 ;
 }
 
-#lateral-contatos i span{
-    left: 30px;
+#etiqueta-bonus:hover{
+    left: 0;
+    background: linear-gradient(to right, #b60f03, black);
+    width: 50%;
+    transition: all 3s;
+}
+
+.etiquetatxt{
+    color: #f8f7f6;
     position: absolute;
-    top: 3px;
-    font-size: 0.9rem;
-    width: 165px;
+    line-height: 20px;
+    width: 65%;
+    text-align: center;
 }
 
-#lateral-contatos i.icon-phone{
+#etiqueta-bonus i{
+    color: #f8f7f6;
     position: absolute;
-    font-size: 25px;
-    left: 2rem;
-    top: 11.5rem;
-    transform: scaleX(-1);
+    right: 0;
+    top: 6px;
+    bottom: 6px;
+    font-size: 26px;
 }
 
-#lateral-contatos span.phone-txt{
-    position: absolute;
-    left: 62px;
-    font-size: 0.9rem;
-    top: 190px;
+@media  (max-width: 991px){
+    header {
+        width: 100%;
+        padding: 0 20px;
+        background: black;
+    }
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+    header nav ul{
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px );
+        background:#333;
+        top: 50px;
+        left: -100%;
+        transition: .5s;
+        /* esse background muda a nav do mobile */
+    }
+
+    header .nav-bar{
+        justify-content: space-evenly;
+    }
+
+    header nav.active{
+        left: 0;
+    }
+
+    header nav ul
+    {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a
+    {
+        border-bottom: 1px solid rgba(0,0,0,.2);
+    }
+
+    #nav-service{
+        display: none;
+    }
+
+
+    /*--------------------------------- Agendamentos --------------------------------*/
+
+    #container-agendamento{
+        height: 126vh;
+    }
+
+    #container-agendamento  #contatos{
+        position: absolute;
+        top: 65%;
+        width: 100%;
+        height: 25%;
+        margin-bottom: -3px;
+    }
+
+
+    #container-agendamento .fundo-vermelho{
+        display: none; /*  REVER ISSO AQUI*/
+        background: #f8f7f6;
+        width: 100%;
+        z-index: 0;
+
+    }
+
+    #container-agendamento #formulario{
+        display: flex;
+        /* justify-content: center; */
+        bottom: 26%;
+        left: 0;
+        right: 0;
+
+    }
+
+    #container-agendamento #formulario h2{
+        font-size: 7em;
+        letter-spacing: 4px;
+        top: -130%;
+        left: 18%;
+        right: 50%;
+
+    }
+
+    #formulario h2 ::before {
+        display: none;
+    }
+
+    #formulario p{
+        font-size: 2em;
+        top: -88%;
+        text-align: center;
+    }
+
+    #formulario-agendamentos{
+        width: 85%;
+       font-size: 3em;
+    }
+
+    #container-agendamento #etiqueta-bonus{
+        display: none;
+    }
+
+    #container-agendamento button.btn-form{
+        background: black;
+        color: white;
+        margin-top: -1px;
+        padding: 8px;
+        cursor: pointer;
+        bottom: -100px;
+        position: absolute;
+        font-size: 1em;
+        width: 90%;
+    }
+
+    #contatos #redes-sociais{
+        display: block;
+        right: 0;
+        top: 0;
+        position: absolute;
+        margin-right: 40px;
+    }
+    #sec{
+        display: block;
+        height: 200px;
+        border: 1px solid red;
+    }
 }
 
-#lateral-contatos i.icon-map{
-    position: absolute;
-    left: 2rem;
-    top: 15rem;
-    font-size: 25px;
-}
-
-#lateral-contatos i span.map-txt{
-    left: 32px;
-}
-
-#lateral-contatos a.whatsapp-icon i{
-    top: 25.5rem;
-    left: 30%;
-    font-size: 2em;
-}
-
-#lateral-contatos a.instagram-icon i{
-
-    top: 25.5rem;
-    left: 50%;
-    font-size: 2em;
-}
-
-#lateral-contatos a.facebook-icon i{
-    top: 25.5rem;
-    left: 70%;
-    font-size: 2em;
-}
-
-#lateral-contatos h2.redes-h2{
-    width: 6em;
-    height: 1em;
-    top: 12em;
-    left: 45%;
-    transform: translateX(-50%);
-
-}
