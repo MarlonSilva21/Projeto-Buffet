@@ -257,23 +257,23 @@
         <section id="formulario">
 
 
-            <form id="formulario-agendamentos">
+            <form id="formulario-agendamentos" name="mensagem" method="post" action="gravar.jsp">
                 <h2><strong>Agendamentos</strong></h2>
                 <p>Entre em contato conosco ou realize seu agendamento por aqui mesmo, responderemos o mais breve possível</p>
 
                 <div class="form-group">
                     <label for="formulario">Nome</label> <br>
-                    <input type="text" class="form-control"  id="Nome" placeholder="Insira seu nome ou o nome ">
+                    <input type="text" class="form-control"  id="Nome" placeholder="Insira seu nome ou o nome " name="txtnome">
                 </div>
                 <div class="form-group">
                     <label for="Email1">Endereço de email</label><br>
-                    <input type="email"  id="Email1" aria-describedby="texto" placeholder="nome@exemplo.com"><br>
+                    <input type="email"  id="Email1" aria-describedby="texto" placeholder="nome@exemplo.com" name="txtemail"><br>
                       <!--   <small id="texto" class="form-text-email">Nunca vamos compartilhar seu email, com ninguém.</small><br>-->
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="mensagem">Mensagem</label><br/>
-                    <textarea class="form-control" id="mensagem" ></textarea><br>
+                    <textarea class="form-control" id="mensagem" name="txtmensagem" ></textarea><br>
                 </div>
                 <button type="submit" class="btn-form">Enviar</button>
             </form>
