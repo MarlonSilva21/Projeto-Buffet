@@ -1,9 +1,7 @@
 $(document).ready(function(){
-  $('.menu-toggle').click(function(){
-    $('nav').toggleClass('active')
-
-  })
-
+    $('.menu-toggle').click(function(){
+        $('nav ul').toggleClass('active')
+    })
 })
 
 

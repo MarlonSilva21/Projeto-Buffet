@@ -1,3 +1,4 @@
+/*------------   Desenvolvido por Marlon Silva   --------------*/
 
 *{
     margin: 0;
@@ -14,6 +15,9 @@ body, html{
     height: 100vh;
     width: 100%;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 ul{
     list-style: none;
@@ -23,12 +27,7 @@ hr{
     margin: 30px auto;
 }
 
-#sec{
-    height: 50vh;
-    width: 100%;
-    background: linear-gradient(to bottom, #fff, #f8f7f6);
-    display: none;
-}
+/*---------------------------- Padronização acima ------------------------------------------*/
 
 header {
     position: fixed;
@@ -602,6 +601,7 @@ section#fotos h2{
 /*------------------- Galeria --------------------*/
 #Galeria{
     background-image: url("../img/galeria_fotos.jpg");
+    position: relative;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -611,6 +611,57 @@ section#fotos h2{
     height: 100vh;
 }
 
+#container-galery{
+    display: flex;
+    height: 64%;
+    position: absolute;
+    width: 50%;
+    margin-left: 5%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.box-home-galery{
+    height: 200px;
+    width: 200px;
+}
+
+#container-galery .box-home-galery img{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+#container-galery .box-home-galery img:hover{
+    border-radius: 100px;
+    width: 220px;
+    height: 210px;
+    transform: rotate(360deg);
+    transition: all 1s;
+}
+
+#btn-galery{
+    padding: 0;
+    position: absolute;
+    bottom: 70px;
+    margin-left: 113px;
+    width: 30em;
+    height: 62px;
+    color: white;
+    background: black;
+}
+
+#btn-galery:hover{
+    background: linear-gradient(to right ,black, red);
+}
+
+#btn-galery h2{
+    text-align: center;
+    align-content: center;
+    margin: 10px;
+}
 /**************************************************************/
 
 #container-agendamento{
@@ -636,8 +687,6 @@ section#fotos h2{
     bottom: 0;
     top: 0;
     margin: auto;
-
-
     background: black;
 }
 
@@ -664,8 +713,6 @@ section#fotos h2{
     font-family: 'Lobster', cursive;
     font-weight: normal;
 }
-
-
 
 #contatos #redes-sociais{
     display: flex;
@@ -697,7 +744,6 @@ section#fotos h2{
 #formulario{
     font-family: 'Lobster', cursive;
     position: absolute;
-    /* margin-left: 21rem; */
     left: 10%;
     right: 48%;
     top: 0;
@@ -707,7 +753,6 @@ section#fotos h2{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    /*background: #a41b11;*/
     padding: 2rem;
     border-radius: 8px;
 }
@@ -715,7 +760,7 @@ section#fotos h2{
 #formulario p {
     font-size: 0.6em;
     position: absolute;
-    top: 0;
+    top: 40px;
     margin-top: 15px;
     left: 10%;
     right: 10%;
@@ -725,9 +770,10 @@ section#fotos h2{
     font-family: 'Lobster', cursive;
     font-size: 44px;
     position: absolute;
-    top: -40px;
-    left: 25%;
-    right: 10%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
 
 }
 
@@ -737,7 +783,7 @@ section#fotos h2{
     height: 4px;
     width: 200px;
     bottom: 1px;
-    left: 47px;
+    margin-left: 50px;
     border-radius: 8px;
     background: linear-gradient(45deg, #b60f03, #000000);
 }
@@ -749,6 +795,8 @@ section#fotos h2{
     right: 10%;
     flex-flow: column nowrap;
     margin-top: 50px;
+    height: 23em;
+    justify-content: center;
 }
 
 #formulario input{
@@ -771,18 +819,17 @@ section#fotos h2{
     max-height: 100px;
     min-width: 90%;
     max-width: 90%;
-
 }
 
 #formulario .btn-form{
-    background: black;
-    color: white;
+    position: absolute;
     margin-top: 0;
     padding: 8px;
     cursor: pointer;
-    bottom: -80px;
-    position: absolute;
-    width: 70%;
+    bottom: 10px;
+    width: 90%;
+    background: black;
+    color: white;
 }
 .form-text-email{
     position: absolute;
@@ -831,10 +878,16 @@ footer{
     bottom: 6px;
     font-size: 26px;
 }
+@media (max-width: 1250px){
+    .ghost{
+        display: none;
+    }
+}
 
 @media  (max-width: 991px){
+
     header {
-        width: 100%;
+        /*width: 100%;*/
         padding: 0 20px;
         background: black;
     }
@@ -846,49 +899,41 @@ footer{
         z-index: 1;
         position: absolute;
         width: 100%;
-        height: calc(100vh - 50px );
-        background:#333;
-        top: 50px;
-        left: -100%;
-        transition: .5s;
-        /* esse background muda a nav do mobile */
-    }
-
-    header .nav-bar{
-        justify-content: space-evenly;
-    }
-
-    header nav.active{
-        left: 0;
-    }
-
-    header nav ul
-    {
+        background: #ffffffbd;
+        top: -290px;
         display: block;
         text-align: center;
-    }
-    header nav ul li a
-    {
-        border-bottom: 1px solid rgba(0,0,0,.2);
+        flex-direction: column;
+        transition: .5s;
     }
 
-    #nav-service{
+    header nav ul.active{
+        top: 49px;
+    }
+
+    .ghost{
         display: none;
     }
 
+    header nav ul li a
+    {
+        color: black;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #00000052;
+    }
 
     /*--------------------------------- Agendamentos --------------------------------*/
 
     #container-agendamento{
-        height: 126vh;
+        height: 155vh;
     }
 
     #container-agendamento  #contatos{
         position: absolute;
-        top: 65%;
         width: 100%;
-        height: 25%;
-        margin-bottom: -3px;
+        height: 40vh;
+        margin-bottom: 0;
     }
 
 
@@ -910,11 +955,11 @@ footer{
     }
 
     #container-agendamento #formulario h2{
-        font-size: 7em;
+        font-size: 2em;
         letter-spacing: 4px;
-        top: -130%;
-        left: 18%;
-        right: 50%;
+        top: 0;
+        left:  0;
+        right: 0;
 
     }
 
@@ -923,14 +968,16 @@ footer{
     }
 
     #formulario p{
-        font-size: 2em;
-        top: -88%;
+        font-size: 0.7em;
+        top: 9%;
         text-align: center;
     }
 
     #formulario-agendamentos{
         width: 85%;
-       font-size: 3em;
+        font-size: 3em;
+        max-height: 20em;
+        margin-bottom: 10vh;
     }
 
     #container-agendamento #etiqueta-bonus{
@@ -938,15 +985,14 @@ footer{
     }
 
     #container-agendamento button.btn-form{
-        background: black;
-        color: white;
-        margin-top: -1px;
+        position: absolute;
         padding: 8px;
         cursor: pointer;
-        bottom: -100px;
-        position: absolute;
+        bottom: 10px;
         font-size: 1em;
         width: 90%;
+        background: black;
+        color: white;
     }
 
     #contatos #redes-sociais{
@@ -956,10 +1002,11 @@ footer{
         position: absolute;
         margin-right: 40px;
     }
-    #sec{
-        display: block;
-        height: 200px;
-        border: 1px solid red;
+}
+
+@media  (max-width: 820px){
+    .ghost1{
+        display: none;
     }
 }
 
