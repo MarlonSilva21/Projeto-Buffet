@@ -33,13 +33,7 @@ developed during the course of the web development udemy
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
-<img align="center" alt="gif" width="100%" height="100%" src="imagens/gif-readme.gif">
-
-<p align="center">
-  <a href="https://gamematamosquito.netlify.app/" target="_blank">
-    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1599785319/readme_logos/demo_on_netlify_umjmch.png">
-  </a>
-</p>
+<img align="center" alt="gif" width="100%" height="100%" src="img/gif-readme.gif">
 
 ## :rocket: Technologies
 
